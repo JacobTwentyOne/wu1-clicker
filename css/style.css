@@ -61,6 +61,7 @@ audio {
 .hero {
     display: grid;
     grid-template-areas: 'stack';
+  
 }
 
 .hero-gradient {
@@ -141,7 +142,7 @@ audio {
     width: var(--space-4xl-5xl);
     height: var(--space-4xl-5xl);
     font-size: var(--step-2);
-    background: url('../img/brett-meliti-RgkYMfFopIA-unsplash-removebg-preview.png');
+    background: url('../img/nice.png');
     background-size: cover;
     background-position: center;
     border: 2px solid transparent;
@@ -158,6 +159,8 @@ audio {
 #game-button:active {
     border-color: var(--color-dark);
     background-color: var(--color-dark-transparent);
+    background: url('../img/catyell.png');
+    
 }
 
 /* #msgbox är elementet som visar sidans toasts, popupmeddelanden
