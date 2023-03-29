@@ -142,7 +142,7 @@ audio {
     width: var(--space-4xl-5xl);
     height: var(--space-4xl-5xl);
     font-size: var(--step-2);
-    background: url('../img/nice.png');
+    background: url('../img/catnoyell.png');
     background-size: cover;
     background-position: center;
     border: 2px solid transparent;
@@ -159,7 +159,9 @@ audio {
 #game-button:active {
     border-color: var(--color-dark);
     background-color: var(--color-dark-transparent);
-    background: url('../img/catyell.png');
+    background: url('../img/lastcat.png');
+    
+    
     
 }
 
