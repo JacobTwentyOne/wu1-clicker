@@ -15,6 +15,11 @@ const upgradesTracker = document.querySelector('#upgrades');
 const upgradeList = document.querySelector('#upgradelist');
 const msgbox = document.querySelector('#msgbox');
 const audioAchievement = document.querySelector('#swoosh');
+const mousedown = document.querySelector('#mousedown')
+const scream = document.querySelector('#scream')
+const saul = document.querySelector('#saul')
+
+
 
 /* Följande variabler använder vi för att hålla reda på hur mycket pengar som
  * spelaren, har och tjänar.
@@ -37,22 +42,22 @@ let active = false; // exempel för att visa att du kan lägga till klass för a
 
 let achievements = [
     {
-        description: 'Museet är redo att öppna, grattis! ',
+        description: 'cool cat award! ',
         requiredUpgrades: 1,
         acquired: false,
     },
     {
-        description: 'Nu börjar det likna något, fortsätt gräva!',
+        description: 'kan katter klättra?!',
         requiredUpgrades: 10,
         acquired: false,
     },
     {
-        description: 'Klickare, med licens att klicka!',
+        description: 'Klappa katt!',
         requiredClicks: 10,
         acquired: false,
     },
     {
-        description: 'Tac-2 god!',
+        description: 'chilla lite!',
         requiredClicks: 10000,
         acquired: false,
     },
@@ -68,13 +73,18 @@ let achievements = [
  * money.
  * Läs mer: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
  */
+addEventListener("mousedown", (event) => {});
+
+onmousedown = (event) => {};
 clickerButton.addEventListener(
     'click',
     () => {
+     
         // vid click öka score med moneyPerClick
         money += moneyPerClick;
         // håll koll på hur många gånger spelaren klickat
         numberOfClicks += 1;
+        scream.play();
         // console.log(clicker.score);
     },
     false
@@ -94,10 +104,12 @@ function step(timestamp) {
     mpsTracker.textContent = moneyPerSecond;
     mpcTracker.textContent = moneyPerClick;
     upgradesTracker.textContent = acquiredUpgrades;
+   
 
     if (timestamp >= last + 1000) {
         money += moneyPerSecond;
         last = timestamp;
+     
     }
 
     if (moneyPerSecond > 0 && !active) {
@@ -163,22 +175,22 @@ window.addEventListener('load', (event) => {
  */
 upgrades = [
     {
-        name: 'Sop',
+        name: 'katt godis',
         cost: 10,
         amount: 1,
     },
     {
-        name: 'Kvalitetsspade',
+        name: 'en till katt',
         cost: 50,
         clicks: 2,
     },
     {
-        name: 'Skottkärra',
+        name: 'katt mat',
         cost: 100,
         amount: 10,
     },
     {
-        name: 'Grävmaskin',
+        name: 'michel',
         cost: 1000,
         amount: 100,
     },
@@ -251,5 +263,9 @@ function message(text, type) {
     }
     setTimeout(() => {
         p.parentNode.removeChild(p);
-    }, 2000);
+    }, 1);
 }
+
+
+
+
